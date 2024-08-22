@@ -19,6 +19,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web') // Use implementation instead of compile
     testImplementation('org.springframework.boot:spring-boot-starter-test') // Use testImplementation instead of testCompile
