@@ -1,0 +1,25 @@
+buildscript {
+    ext {
+        springBootVersion = '2.7.0' // Update to a newer Spring Boot version
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web') // Use implementation instead of compile
+    testImplementation('org.springframework.boot:spring-boot-starter-test') // Use testImplementation instead of testCompile
+}
